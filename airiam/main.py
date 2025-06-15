@@ -1,6 +1,7 @@
 import argparse
 import logging
 import sys
+from typing import List, Optional
 
 from airiam.Reporter import Reporter, OutputFormat
 from airiam.find_unused.find_unused import find_unused
@@ -8,7 +9,7 @@ from airiam.recommend_groups.recommend_groups import recommend_groups
 from airiam.terraform.TerraformTransformer import TerraformTransformer
 
 
-def configure_logger(logging_level=logging.INFO):
+def configure_logger(logging_level: int = logging.INFO) -> logging.Logger:
     logging.basicConfig(level=logging_level)
     # define a Handler which writes INFO messages or higher to the sys.stderr
     console = logging.StreamHandler()
@@ -17,10 +18,10 @@ def configure_logger(logging_level=logging.INFO):
     formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
     # tell the handler to use this format
     console.setFormatter(formatter)
-    return logging
+    return logging.getLogger(__name__)
 
 
-def run():
+def run() -> None:
     logger = configure_logger()
 
     Reporter.print_prelude()
@@ -30,13 +31,13 @@ def run():
 
     if args.command == 'find_unused':
         Reporter.report_unused(runtime_results)
-        exit()
+        sys.exit(0)
 
     if args.command == 'recommend_groups' or args.command == 'terraform' and not args.without_groups:
         report_with_recommendations = recommend_groups(logger, runtime_results, args.last_used_threshold)
         if args.command == 'recommend_groups':
             Reporter.report_groupings(report_with_recommendations)
-            exit()
+            sys.exit(0)
 
     if args.command == 'terraform':
         entities_terraformed, result_dir = TerraformTransformer(logger, args.profile, args.directory)\
@@ -44,7 +45,7 @@ def run():
         Reporter.report_terraform(entities_terraformed, result_dir)
 
 
-def parse_args(args):
+def parse_args(args: List[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('-v', '--version', help='Get AirIAM\'s version', action='store_true')
 

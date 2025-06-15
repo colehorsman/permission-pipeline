@@ -1,0 +1,58 @@
+2025-06-14 21:53:27,546 - examples.complete_workflow_demo - ERROR - Step 3 failed: Object of type MockRiskScore is not JSON serializable
+2025-06-14 21:54:00,940 - airiam.tracking.improvement_tracker - INFO - Recorded assessment: assessment_20250614_215400
+2025-06-14 21:54:00,941 - airiam.tracking.improvement_tracker - INFO - Created security goal: Reduce Overall Risk Score
+2025-06-14 21:54:00,941 - examples.complete_workflow_demo - ERROR - Step 3 failed: UNIQUE constraint failed: goals.goal_id
+2025-06-14 21:54:38,603 - airiam.tracking.improvement_tracker - INFO - Recorded assessment: assessment_20250614_215438
+2025-06-14 21:54:38,603 - airiam.tracking.improvement_tracker - INFO - Created security goal: Reduce Overall Risk Score
+2025-06-14 21:54:38,604 - examples.complete_workflow_demo - ERROR - Step 3 failed: UNIQUE constraint failed: goals.goal_id
+2025-06-14 21:55:18,837 - airiam.cicd.risk_monitor - INFO - Monitoring configuration saved to: demo_cicd_monitor_config.yaml
+2025-06-14 21:55:18,838 - airiam.cicd.risk_monitor - INFO - Running CI/CD security pipeline check...
+2025-06-14 21:55:20,903 - airiam.integrations.aws_risk_analyzer - ERROR - AWS credentials error: Unable to locate credentials
+2025-06-14 21:55:20,903 - airiam.cicd.risk_monitor - ERROR - Pipeline check failed: Unable to locate credentials
+2025-06-14 21:55:52,155 - airiam.tracking.improvement_tracker - INFO - Recorded assessment: assessment_20250614_215552
+2025-06-14 21:55:52,157 - airiam.tracking.improvement_tracker - INFO - Created security goal: Reduce Overall Risk Score
+2025-06-14 21:55:52,158 - airiam.tracking.improvement_tracker - INFO - Created security goal: Zero Critical Risk Identities
+2025-06-14 21:55:52,160 - airiam.tracking.improvement_tracker - INFO - Created security goal: Minimize High-Risk Identities
+2025-06-14 21:55:52,160 - airiam.tracking.improvement_tracker - INFO - Created improvement action: Enforce MFA for All Administrative Accounts
+2025-06-14 21:55:52,166 - airiam.cicd.risk_monitor - INFO - Monitoring configuration saved to: demo_cicd_monitor_config.yaml
+2025-06-14 21:55:52,167 - airiam.cicd.risk_monitor - INFO - Running CI/CD security pipeline check...
+2025-06-14 21:55:52,223 - airiam.integrations.aws_risk_analyzer - ERROR - AWS credentials error: Unable to locate credentials
+2025-06-14 21:55:52,224 - airiam.cicd.risk_monitor - ERROR - Pipeline check failed: Unable to locate credentials
+2025-06-14 22:00:48,733 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-14 22:00:49,031 - airiam.integrations.aws_risk_analyzer - INFO - Connected to AWS account: 767828760205
+2025-06-14 22:00:49,331 - airiam.integrations.aws_risk_analyzer - INFO - Starting AWS account risk analysis...
+2025-06-14 22:00:49,332 - airiam.integrations.aws_risk_analyzer - INFO - Collecting IAM data from AWS...
+2025-06-14 22:00:49,336 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-14 22:01:24,308 - airiam.integrations.aws_risk_analyzer - INFO - Analyzing CloudTrail usage patterns...
+2025-06-14 22:01:24,308 - airiam.integrations.aws_risk_analyzer - INFO - Calculating risk scores for all identities...
+2025-06-14 22:01:24,308 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:user/air-iam-user: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:user/cole: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:user/grocery-app: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:user/iam.test-user2: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:user/n8n: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:user/test.user1: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:user/test.user3: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/ai-stack-LambdaExecutionRole-Y1QOwuna5gBy: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/aws-fms-prereq-FMSHelperFunctionServiceRoleA51F4DD9-d3AZCnFCeIt6: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/aws-fms-prereq-HelperProviderframeworkonEventServic-ZMlGIhjkoTp2: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/aws-fms-prereq-PreReqManagerFunctionServiceRole3E27-qtm3xlthSxyQ: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/aws-fms-prereq-PreReqProviderframeworkonEventServic-yHjCgiGIBDe1: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/service-role/AWSControlTowerAdmin: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/service-role/AWSControlTowerCloudTrailRole: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/service-role/AWSControlTowerConfigAggregatorRoleForOrganizations: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/service-role/AWSControlTowerStackSetRole: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/cloudformation-nuke-stacks-LambdaExecutionRole-FUw0yWCHqTU8: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/config-role: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/firefly-caa-role: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/github-actions-terraform-role: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/grocery-app-1747008327-CodeBuildServiceRole-Qex1bmsm4NuN: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/grocery-app-1747008327-PipelineServiceRole-zZClopndXbIn: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/invoke-firefly-remote-event-bus: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/key-rotation-stack-LambdaExecutionRole-0tJHcmsdWpc1: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/LambdaVPCFlowLogRole: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/roles-anywhere-assumable-role: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/roles-anywhere-lambda-exec: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - ERROR - Failed to score identity arn:aws:iam::767828760205:role/root_monitor_lambda_role: cannot access local variable 'wildcard_ratio' where it is not associated with a value
+2025-06-14 22:01:24,309 - airiam.integrations.aws_risk_analyzer - INFO - Generating comprehensive reports...
+2025-06-14 22:01:24,309 - __main__ - ERROR - Step 1 failed: [Errno 2] No such file or directory: 'step1_reports_20250614_220049/iam_risk_dashboard_20250614_220124.html'
+2025-06-14 22:01:24,309 - __main__ - ERROR - Workflow failed: [Errno 2] No such file or directory: 'step1_reports_20250614_220049/iam_risk_dashboard_20250614_220124.html'

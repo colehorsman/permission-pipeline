@@ -24,20 +24,23 @@ version = mod.version  # type: ignore
 setup(
     extras_require={
         "dev": [
-            "Cerberus==1.3.2",
-            "coverage==5.0.4",
-            "coverage-badge==1.0.1",
-            "moto==1.3.14",
-            "pipenv-setup==3.0.1",
-            "pytest==5.4.1"
+            "Cerberus>=1.3.4",
+            "coverage>=7.0.0",
+            "coverage-badge>=1.1.0",
+            "moto>=4.2.0",
+            "pytest>=8.0.0",
+            "pytest-cov>=4.0.0",
+            "black>=23.0.0",
+            "mypy>=1.0.0",
+            "ruff>=0.1.0"
         ]
     },
     install_requires=[
-        "boto3>=1.12.43",
-        "colorama==0.4.3",
-        "python-terraform==0.10.1",
-        "requests>=2.22.0",
-        "termcolor==1.1.0"
+        "boto3>=1.34.0",
+        "colorama>=0.4.6",
+        "python-terraform>=0.10.1",
+        "requests>=2.31.0",
+        "termcolor>=2.3.0"
     ],
     license="Apache License 2.0",
     name="airiam",
@@ -50,12 +53,20 @@ setup(
     scripts=["bin/airiam","bin/airiam.cmd"],
     long_description=long_description,
     long_description_content_type="text/markdown",
+    python_requires=">=3.8",
     classifiers=[
         'Environment :: Console',
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',
-        'Programming Language :: Python :: 3.7',
+        'License :: OSI Approved :: Apache Software License',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
         'Topic :: Security',
-        'Topic :: Software Development :: Build Tools'
+        'Topic :: Software Development :: Build Tools',
+        'Topic :: System :: Systems Administration'
     ]
 )
